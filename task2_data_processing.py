@@ -7,13 +7,13 @@ def stars():
 
 # STEP 1: Load JSON File from data folder, converting to data frames with pandas and printing how many rows were loaded.
 
-file_path = "data/trends_20260414.json"
+trending_data = "data/trends_20260414.json"
 
-with open(file_path, "r", encoding="utf-8") as f:
+with open(trending_data, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 df = pd.DataFrame(data)
-print(f"\nLoaded {len(df)} stories from {file_path}\n")
+print(f"\nLoaded {len(df)} stories from {trending_data}\n")
 
 # STEP 2: Clean the Data by removing the duplicates based on post_id and rows with missing data. printing no of rows remaining after cleaning
 
