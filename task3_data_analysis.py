@@ -3,7 +3,7 @@ import numpy as np
 
 # STEP 1: Loading the data from csv file and convert them to panda data frames for analysing the data 
 
-cleaned_data = "main/data/trends_clean.csv"
+cleaned_data = "data/trends_clean.csv"
 df = pd.read_csv(cleaned_data)
 
 #Print the shape of the DataFrame (rows and columns)
@@ -58,6 +58,6 @@ df["is_popular"] = df["score"] > avg_score
 
 # STEP 4: Save the result to CSV
 
-analysed_data = "main/data/trends_analysed.csv"
+analysed_data = "data/trends_analysed.csv"
 df.to_csv(analysed_data, index=False)
 print(f"\nSaved to {analysed_data}")

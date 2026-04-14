@@ -91,10 +91,10 @@ def fetch_data():
 
 data = fetch_data()
 # Create folder if not exists
-if not os.path.exists("main/data"):
-    os.makedirs("main/data")
+if not os.path.exists("data"):
+    os.makedirs("data")
 
-file_name = f"main/data/trends_{datetime.datetime.now().strftime('%Y%m%d')}.json"
+file_name = f"data/trends_{datetime.datetime.now().strftime('%Y%m%d')}.json"
 
 with open(file_name, "w", encoding="utf-8") as f:
     json.dump(data, f, indent=4)

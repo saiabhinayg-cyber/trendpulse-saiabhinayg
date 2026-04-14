@@ -4,12 +4,12 @@ import os
 
 # STEP 1: Load Data + Setup
 # -----------------------------
-analysed_data = "main/data/trends_analysed.csv"
+analysed_data = "data/trends_analysed.csv"
 df = pd.read_csv(analysed_data)
 
 # Create outputs folder if not exists
-if not os.path.exists("main/outputs"):
-    os.makedirs("main/outputs")
+if not os.path.exists("outputs"):
+    os.makedirs("outputs")
 
 # STEP 2: Chart 1- Top 10 Stories by Score
 
@@ -28,7 +28,7 @@ plt.title("Top 10 Stories by Score")
 plt.gca().invert_yaxis()
 
 #using plt.savefig() for saving the chart as img
-plt.savefig("main/outputs/chart1_top_stories.png")
+plt.savefig("outputs/chart1_top_stories.png")
 plt.close()
 
 # STEP 3: Chart 2 — Stories per Category
@@ -42,7 +42,7 @@ plt.ylabel("Number of Stories")
 plt.title("Stories per Category")
 
 #using plt.savefig() for saving the chart as img
-plt.savefig("main/outputs/chart2_categories.png")
+plt.savefig("outputs/chart2_categories.png")
 plt.close()
 
 # STEP 4: Chart 3 — Scatter Plot
@@ -59,7 +59,7 @@ plt.title("Score vs Comments")
 plt.legend()
 
 #using plt.savefig() for saving the chart as img
-plt.savefig("main/outputs/chart3_scatter.png")
+plt.savefig("outputs/chart3_scatter.png")
 plt.close()
 
 # BONUS: Dashboard
@@ -88,6 +88,6 @@ axes[2].legend()
 
 # Overall title
 plt.suptitle("TrendPulse Dashboard")
-plt.savefig("main/outputs/dashboard.png")
+plt.savefig("outputs/dashboard.png")
 plt.close()
 print("\nAll charts saved in 'outputs/' folder")

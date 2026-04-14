@@ -7,7 +7,7 @@ def stars():
 
 # STEP 1: Load JSON File from data folder, converting to data frames with pandas and printing how many rows were loaded.
 
-file_path = "main/data/trends_20260414.json"
+file_path = "data/trends_20260414.json"
 
 with open(file_path, "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -33,7 +33,7 @@ df["title"] = df["title"].str.strip()
 
 # STEP 3: Save as CSV and printing a quick summary of how many stories per category
 
-output_file = "main/data/trends_clean.csv"
+output_file = "data/trends_clean.csv"
 df.to_csv(output_file, index=False)
 
 stars()
